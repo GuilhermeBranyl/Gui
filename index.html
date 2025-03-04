@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Tai 💖</title>
+    <style>
+        body {
+            background: url('adventure-time.jpg') no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'Comic Sans MS', cursive;
+            text-align: center;
+            padding: 50px;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+            display: inline-block;
+            position: relative;
+        }
+        h1 {
+            color: #ff69b4;
+        }
+        p {
+            font-size: 18px;
+            color: #555;
+        }
+        img {
+            width: 200px;
+            border-radius: 20px;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        button {
+            font-size: 16px;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 10px;
+            margin: 5px;
+        }
+        #yesBtn {
+            background-color: #ff69b4;
+            color: white;
+        }
+        #noBtn {
+            background-color: #ff4444;
+            color: white;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="questionContainer">
+        <h1>Oi, Tai 💖</h1>
+        <p>"Eu estava aqui pensando… será que você é um feitiço de mago poderoso? Porque toda vez que te vejo, meu coração buga e meu senso de direção some… direto pro seu colo. 😏💕" </p>
+        <img src="tai.gif" alt="Gif especial">
+        <p>Então é vdd que você tem uma quedinha por mim? 😏</p>
+        <div class="buttons">
+            <button id="yesBtn">Sim 💖</button>
+            <button id="noBtn">Não 🙈</button>
+        </div>
+    </div>
+    <script>
+        const noBtn = document.getElementById("noBtn");
+        const yesBtn = document.getElementById("yesBtn");
+        const questionContainer = document.getElementById("questionContainer");
+
+        noBtn.addEventListener("mouseover", () => {
+            const newX = Math.floor(Math.random() * questionContainer.offsetWidth);
+            const newY = Math.floor(Math.random() * questionContainer.offsetHeight);
+            noBtn.style.left = `${newX}px`;
+            noBtn.style.top = `${newY}px`;
+        });
+
+        yesBtn.addEventListener("click", () => {
+            alert("Sabia! 💖✨");
+        });
+    </script>
+</body>
+</html>
