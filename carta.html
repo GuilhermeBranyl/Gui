@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Envelope de Carta</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="envelope" onclick="openEnvelope()">
+        <div class="flap"></div> <!-- Aba do envelope -->
+        <div class="body"></div> <!-- Corpo do envelope -->
+        <div class="letter">
+            <p>Para a pessoa mais especial do mundo,</p>
+            <p>Você ilumina meus dias como o sol ilumina a manhã. 💖</p>
+            <p>Com carinho,</p>
+            <p>Seu admirador secreto.</p>
+        </div>
+    </div>
+
+    <a href="index.html" class="back-button">Voltar</a>
+
+    <script>
+        function openEnvelope() {
+            const envelope = document.querySelector('.envelope');
+            const letter = document.querySelector('.letter');
+            envelope.classList.toggle('open');
+
+            // Se o envelope estiver aberto, a carta deve ter o z-index maior, permitindo que sobreponha
+            if (envelope.classList.contains('open')) {
+                letter.style.zIndex = '4';  // A carta sobe e fica acima do envelope
+            } else {
+                letter.style.zIndex = '1';  // A carta volta a ficar atrás do envelope
+            }
+        }
+    </script>
+</body>
+</html>

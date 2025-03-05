@@ -11,17 +11,45 @@
             font-family: 'Comic Sans MS', cursive;
             text-align: center;
             padding: 50px;
+            margin: 0;
         }
         .container {
-            background: rgba(255, 255, 255, 0.8);
+            background: rgba(255, 255, 255, 0.8); /* Branco com leve transparência */
             border-radius: 20px;
             padding: 30px;
             box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
             display: inline-block;
             position: relative;
+            margin-top: 50px; /* Ajustado para não colidir com o cabeçalho */
+            width: 100%;
+        }
+        /* Estilo do cabeçalho dentro da div com fundo branco */
+        .menu {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.8); /* Branco com leve transparência */
+            border-radius: 20px;
+            padding: 15px 0;
+            margin-bottom: 20px;
+        }
+        .menu button {
+            background-color: #ff69b4;
+            color: white;
+            font-size: 18px;
+            padding: 12px 20px;
+            margin: 0 10px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .menu button:hover {
+            background-color: #ff4444;
         }
         h1 {
-            color: #ff69b4;
+            color: #ff69b4; /* Cor do título no cabeçalho */
+            margin-bottom: 20px;
         }
         p {
             font-size: 18px;
@@ -54,7 +82,21 @@
     </style>
 </head>
 <body>
+
+    <!-- Container com o cabeçalho e o conteúdo principal -->
     <div class="container" id="questionContainer">
+        <!-- Cabeçalho com menu de botões dentro da div principal, fundo branco -->
+        <div class="menu">
+            <button>🏠</button>
+            <button>🌟</button>
+            <a href="carta.html">
+                <button>📩</button>
+            </a>
+        
+            <button>📸</button>
+        </div>
+
+        <!-- Conteúdo principal -->
         <h1>Oi, Tai 💖</h1>
         <p>"Eu estava aqui pensando… será que você é um feitiço de mago poderoso? Porque toda vez que te vejo, meu coração buga e meu senso de direção some… direto pro seu colo. 😏💕" </p>
         <img src="tai.gif" alt="Gif especial">
@@ -64,6 +106,7 @@
             <button id="noBtn">Não 🙈</button>
         </div>
     </div>
+
     <script>
         const noBtn = document.getElementById("noBtn");
         const yesBtn = document.getElementById("yesBtn");
